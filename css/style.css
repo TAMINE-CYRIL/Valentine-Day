@@ -1,0 +1,40 @@
+body{
+    background-color: beige;
+}
+
+p{
+    text-align: center;
+    font-size: large;
+    font-family: Verdana, serif;
+}
+
+.button{
+    text-align: center;
+    padding: 20px;
+}
+
+button{
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.yes{
+    background-color: #92d175;
+}
+
+.yes:hover{
+    background-color: #afd69d;
+    color: white;
+}
+
+.no{
+    background-color: #e89b9b;
+}
+
+.no:hover{
+    background-color: #e3baba;
+    color: white;
+}
