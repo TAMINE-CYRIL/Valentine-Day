@@ -77,8 +77,19 @@ function yes(){
     document.body.appendChild(gifContainer);
 
     audio.play();
-    alert("I love you too ❤️");
+    alert("I knew it ! ❤️");
     startHearts();
 
 
+}
+
+function gay(){
+    let buttonNo = document.getElementsByClassName("no")[0];
+    let buttonYes = document.getElementsByClassName("yes")[0];
+    let text = document.getElementsByClassName("love")[0];
+
+    text.textContent = "But are you gay ?"
+    buttonNo.textContent = "Yes, but in red."
+    buttonYes.textContent = "Yes I am."
+    alert("You have good eyes ! 👀")
 }
