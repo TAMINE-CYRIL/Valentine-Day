@@ -1,6 +1,7 @@
 let count=0;
 let audio = new Audio("media/chill.mp3");
 
+
 function createHeart() {
     let heart = document.createElement("section");
     heart.classList.add("heart");
@@ -47,7 +48,6 @@ function increaseButtonSize() {
         button.style.right = "0";
         button2.style.display = "none";
         text.style.display = "none";
-        startHearts();
 
     }
 
@@ -62,8 +62,22 @@ function no() {
 
 function yes(){
     let buttonNo = document.getElementsByClassName("no")[0];
+    let buttonYes = document.getElementsByClassName("yes")[0];
+
     buttonNo.style.display = "none";
+    buttonYes.style.display = "none";
+    let gifContainer = document.createElement("section");
+    gifContainer.classList.add("gif-container");
+
+    let gif = document.createElement("img");
+    gif.classList.add("gif");
+    gif.src ="media/couple.gif";
+    gif.alt = "couple gif";
+    gifContainer.appendChild(gif);
+    document.body.appendChild(gifContainer);
+
     audio.play();
     alert("I love you too ❤️");
     startHearts();
+
 }
