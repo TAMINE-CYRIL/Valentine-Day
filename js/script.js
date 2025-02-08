@@ -5,8 +5,7 @@ function createHeart() {
     let heart = document.createElement("section");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
-    heart.style.bottom = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Durée aléatoire
+    heart.style.left = Math.random() * 100 + "vw";
 
     document.body.appendChild(heart);
 

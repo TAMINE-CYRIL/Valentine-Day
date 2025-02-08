@@ -51,17 +51,19 @@ button{
     color: white;
 }
 
-.heart{
-
-    transform: translateX(0);
-    animation: fall 3s infinite;
+.heart {
+    position: fixed;
+    font-size: 1.5rem;
+    top: -1vh;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
 }
 
 @keyframes fall {
-    from{
-        transform: translateX(0) translateY(-30px);
+    from {
+        transform: translateY(0vh) translateX(-10vw);
     }
-    to{
-        transform: translateX(30px) translateY(30px);
+    to {
+        transform: translateY(105vh) translateX(10vw);
     }
 }
