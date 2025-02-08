@@ -23,7 +23,6 @@ function startHearts() {
 function increaseButtonSize() {
     let button = document.getElementsByClassName("yes")[0];
     let button2 = document.getElementsByClassName("no")[0];
-    let text = document.getElementsByClassName("love")[0];
 
     let currentWidth = parseInt(button.style.width) || 100;
     let currentHeight = parseInt(button.style.height) || 50;
@@ -47,7 +46,6 @@ function increaseButtonSize() {
         button.style.left = "0";
         button.style.right = "0";
         button2.style.display = "none";
-        text.style.display = "none";
 
     }
 
@@ -64,10 +62,10 @@ function yes(){
     let buttonNo = document.getElementsByClassName("no")[0];
     let buttonYes = document.getElementsByClassName("yes")[0];
     let text = document.getElementsByClassName("love")[0];
-
-
     buttonNo.style.display = "none";
     buttonYes.style.display = "none";
+    text.textContent = "Let me give you a hug ️ ! ❤️ ";
+    text.style.display = "block";
     let gifContainer = document.createElement("section");
     gifContainer.classList.add("gif-container");
 
@@ -81,7 +79,6 @@ function yes(){
     audio.play();
     alert("I love you too ❤️");
     startHearts();
-    text.textContent="Let me give you a hug ️ ! ❤️ ";
 
 
 }
