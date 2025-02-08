@@ -63,6 +63,8 @@ function no() {
 function yes(){
     let buttonNo = document.getElementsByClassName("no")[0];
     let buttonYes = document.getElementsByClassName("yes")[0];
+    let text = document.getElementsByClassName("love")[0];
+
 
     buttonNo.style.display = "none";
     buttonYes.style.display = "none";
@@ -79,5 +81,7 @@ function yes(){
     audio.play();
     alert("I love you too ❤️");
     startHearts();
+    text.textContent="Let me give you a hug ️ ! ❤️ ";
+
 
 }
