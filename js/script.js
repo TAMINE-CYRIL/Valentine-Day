@@ -1,6 +1,24 @@
 let count=0;
 let audio = new Audio("media/chill.mp3");
 
+function createHeart() {
+    let heart = document.createElement("section");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.bottom = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Durée aléatoire
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 3000);
+}
+
+function startHearts() {
+    setInterval(createHeart, 300);
+
+}
 
 function increaseButtonSize() {
     let button = document.getElementsByClassName("yes")[0];
@@ -30,6 +48,7 @@ function increaseButtonSize() {
         button.style.right = "0";
         button2.style.display = "none";
         text.style.display = "none";
+        startHearts();
 
     }
 
@@ -46,6 +65,6 @@ function yes(){
     let buttonNo = document.getElementsByClassName("no")[0];
     buttonNo.style.display = "none";
     audio.play();
-
-
+    alert("I love you too ❤️");
+    startHearts();
 }

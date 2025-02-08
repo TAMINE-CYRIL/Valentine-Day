@@ -50,3 +50,18 @@ button{
     background-color: #dc8080;
     color: white;
 }
+
+.heart{
+
+    transform: translateX(0);
+    animation: fall 3s infinite;
+}
+
+@keyframes fall {
+    from{
+        transform: translateX(0) translateY(-30px);
+    }
+    to{
+        transform: translateX(30px) translateY(30px);
+    }
+}
