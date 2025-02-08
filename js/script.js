@@ -1,4 +1,5 @@
 let count=0;
+let audio = new Audio("media/chill.mp3");
 
 
 function increaseButtonSize() {
@@ -29,6 +30,7 @@ function increaseButtonSize() {
         button.style.right = "0";
         button2.style.display = "none";
         text.style.display = "none";
+
     }
 
 
@@ -41,6 +43,9 @@ function no() {
 }
 
 function yes(){
+    let buttonNo = document.getElementsByClassName("no")[0];
+    buttonNo.style.display = "none";
+    audio.play();
 
 
 }
