@@ -1,5 +1,8 @@
 body{
-    background-color: beige;
+    background-color: #f6bcda;
+    padding: 0;
+    margin: 0;
+
 }
 
 p{
@@ -11,6 +14,8 @@ p{
 .button{
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 button{
@@ -18,6 +23,8 @@ button{
     margin: 20px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 
@@ -31,10 +38,15 @@ button{
 }
 
 .no{
-    background-color: #e89b9b;
+    background-color: #dd2b2b;
+}
+
+.love{
+    display: flex;
+    justify-content: center;
 }
 
 .no:hover{
-    background-color: #e3baba;
+    background-color: #dc8080;
     color: white;
 }
