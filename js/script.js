@@ -83,6 +83,7 @@ function yes(){
 
 }
 
+/*
 function gay(){
     let buttonNo = document.getElementsByClassName("no")[0];
     let buttonYes = document.getElementsByClassName("yes")[0];
@@ -93,3 +94,5 @@ function gay(){
     buttonYes.textContent = "Yes I am."
     alert("You have good eyes ! 👀")
 }
+
+ */
