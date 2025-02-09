@@ -38,6 +38,9 @@ button{
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
+    height: 80px;
+    width: 120px;
+
 }
 
 
@@ -45,28 +48,27 @@ button{
     background-color: #92d175;
 }
 
-.yes:hover{
+
+.no {
+    background-color: #dd2b2b;
+
+}
+
+.no:active {
+    background-color: #dc8080; /* Remet la couleur de base */
+    color: #ffffff;
+}
+
+.yes:active{
     background-color: #afd69d;
     color: white;
 }
-
-.no {
-    height: 70px;
-    background-color: #dd2b2b;
-
-
-}
-
 
 .love{
     display: flex;
     justify-content: center;
 }
 
-.no:hover{
-    background-color: #dc8080;
-    color: white;
-}
 
 .heart {
     position: fixed;

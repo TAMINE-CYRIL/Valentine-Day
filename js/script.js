@@ -1,5 +1,6 @@
 let count = 0;
 let audio = new Audio("media/chill.mp3");
+let yippie = new Audio("media/yippie.mp3");
 
 function createHeart() {
     let heart = document.createElement("section");
@@ -22,11 +23,11 @@ function increaseButtonSize() {
     let buttonYes = document.querySelector(".yes"); // Sélectionne uniquement le bouton "Yes"
 
     let currentWidth = parseInt(buttonYes.style.width) || 100;
-    let currentHeight = parseInt(buttonYes.style.height) || 50;
+    let currentHeight = parseInt(buttonYes.style.height) || 80;
     let currentSize = parseInt(window.getComputedStyle(buttonYes).fontSize)
 
-    let newWidth = currentWidth * 1.35;
-    let newHeight = currentHeight * 1.35;
+    let newWidth = currentWidth * 1.32;
+    let newHeight = currentHeight * 1.32;
     let newSize = currentSize * 1.1;
 
     buttonYes.style.width = newWidth + "px";
@@ -34,6 +35,7 @@ function increaseButtonSize() {
     buttonYes.style.fontSize = newSize + "px";
 
     count++;
+    console.log(count);
     if (count === 8) {
         buttonYes.style.fontSize = "5rem";
         buttonYes.style.position = "fixed";
@@ -48,7 +50,23 @@ function increaseButtonSize() {
     }
 }
 
+function createGif(){
+    let gifContainer = document.createElement("section");
+    gifContainer.classList.add("gif-container");
+
+    let gif = document.createElement("img");
+    gif.classList.add("gif");
+    gif.src = "media/couple.gif";
+    gif.alt = "couple gif";
+
+    gifContainer.appendChild(gif);
+    document.body.appendChild(gifContainer);
+    yippie.play();
+
+}
+
 function no() {
+    console.log("C'est cliqué !");
     let buttonNo = document.querySelector(".no");
     buttonNo.addEventListener("click", increaseButtonSize);
 }
@@ -62,20 +80,9 @@ function yes() {
     buttonYes.style.display = "none";
     text.textContent = "Let me give you a hug ️! ❤️";
     text.style.display = "block";
-
-    let gifContainer = document.createElement("section");
-    gifContainer.classList.add("gif-container");
-
-    let gif = document.createElement("img");
-    gif.classList.add("gif");
-    gif.src = "media/couple.gif";
-    gif.alt = "couple gif";
-
-    gifContainer.appendChild(gif);
-    document.body.appendChild(gifContainer);
-
-    audio.play();
+    createGif();
     alert("I knew it ! ❤️");
+    audio.play();
     startHearts();
 }
 
@@ -89,3 +96,8 @@ function gay() {
     buttonYes.textContent = "Yes I am.";
     alert("You have good eyes ! 👀");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let buttonNo = document.querySelector(".no");
+    buttonNo.addEventListener("click", increaseButtonSize);
+});
