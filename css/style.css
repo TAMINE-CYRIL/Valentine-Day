@@ -50,9 +50,13 @@ button{
     color: white;
 }
 
-.no{
+.no {
+    height: 70px;
     background-color: #dd2b2b;
+
+
 }
+
 
 .love{
     display: flex;
