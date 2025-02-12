@@ -43,6 +43,12 @@ button{
 
 }
 
+button:hover{
+    height: 90px;
+    width: 130px;
+    transition: all 0.5s ease-in-out;
+}
+
 
 .yes{
     background-color: #92d175;
@@ -101,22 +107,6 @@ button{
 .gif {
     width: 50vw;
     max-width: 90vh;
-}
-
-.lgbt {
-    padding-left: 30px;
-    padding-bottom: 30px ;
-    width: 1vw;
-    height: auto;
-    max-width: 1vh;
-    max-height: 1vh;
-    cursor: pointer;
-    transition: transform 0.3s;
-    opacity: 0.1;
-}
-
-.lgbt:hover {
-    transform: scale(1.1);
 }
 
 .valentine{

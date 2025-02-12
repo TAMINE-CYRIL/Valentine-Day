@@ -1,6 +1,6 @@
-let count = 0;
 let audio = new Audio("media/chill.mp3");
 let yippie = new Audio("media/yippie.mp3");
+
 
 /**
  * Fonction créant les coeurs et les implémente dans le corps du site
@@ -23,31 +23,6 @@ function createHeart() {
  */
 function startHearts() {
     setInterval(createHeart, 300);
-}
-
-/**
- * Augmente la taille du bouton
- */
-function increaseButtonSize() {
-    let buttonYes = document.querySelector(".yes"); // Sélectionne uniquement le bouton "Yes"
-
-    let currentWidth = parseInt(buttonYes.style.width) || 100;
-    let currentHeight = parseInt(buttonYes.style.height) || 80;
-    let currentSize = parseInt(window.getComputedStyle(buttonYes).fontSize)
-
-    let newWidth = currentWidth * 1.32;
-    let newHeight = currentHeight * 1.32;
-    let newSize = currentSize * 1.1;
-
-    buttonYes.style.width = newWidth + "px";
-    buttonYes.style.height = newHeight + "px";
-    buttonYes.style.fontSize = newSize + "px";
-
-    count++;
-    console.log(count);
-    if (count === 8) {
-        finalChoice(buttonYes)
-    }
 }
 
 /**
@@ -82,18 +57,9 @@ function createGif(){
 
     gifContainer.appendChild(gif);
     document.body.appendChild(gifContainer);
-    yippie.play();
 
 }
 
-/**
- * Gère les intérations lorsque le bouton No est appuyé.
- */
-function no() {
-    console.log("C'est cliqué !");
-    let buttonNo = document.querySelector(".no");
-    buttonNo.addEventListener("click", increaseButtonSize);
-}
 
 /**
  * Gère les intéractions lorsque le bouton Yes est appuyé
@@ -107,28 +73,33 @@ function yes() {
     buttonYes.style.display = "none";
     text.textContent = "Let me give you a hug ️! ❤️";
     text.style.display = "block";
+    yippie.play();
     createGif();
-    alert("I knew it ! ❤️");
     audio.play();
+    alert("I knew it ! ❤️");
     startHearts();
 }
 
-/**
- * Change le site si le bouton caché est trouvé
- */
-function gay() {
-    let buttonNo = document.querySelector(".no");
-    let buttonYes = document.querySelector(".yes");
-    let text = document.querySelector(".love");
 
-    text.textContent = "But are you gay ?";
-    buttonNo.textContent = "Yes, but in red.";
-    buttonYes.textContent = "Yes I am.";
-    alert("You have good eyes ! 👀");
+function moveButtonNo() {
+    let buttonNo = document.querySelector(".no");
+
+    let newX = Math.random() * (window.innerWidth - buttonNo.clientWidth);
+    let newY = Math.random() * (window.innerHeight - buttonNo.clientHeight);
+
+    buttonNo.style.position = "absolute";
+    buttonNo.style.left = newX + "px";
+    buttonNo.style.top = newY + "px";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    let buttonNo = document.querySelector(".no");
+    buttonNo.addEventListener("mouseover", moveButtonNo);
+});
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
     let buttonNo = document.querySelector(".no");
     buttonNo.addEventListener("click", increaseButtonSize);
 });
+*/
