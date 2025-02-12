@@ -80,7 +80,9 @@ function yes() {
     startHearts();
 }
 
-
+/**
+ * On change la position du bouton No pour une position aléatoire
+ */
 function moveButtonNo() {
     let buttonNo = document.querySelector(".no");
 
@@ -95,11 +97,6 @@ function moveButtonNo() {
 document.addEventListener("DOMContentLoaded", function () {
     let buttonNo = document.querySelector(".no");
     buttonNo.addEventListener("mouseover", moveButtonNo);
+    buttonNo.addEventListener("touchstart", moveButtonNo);
 });
 
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    let buttonNo = document.querySelector(".no");
-    buttonNo.addEventListener("click", increaseButtonSize);
-});
-*/
