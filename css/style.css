@@ -107,11 +107,23 @@ button{
 }
 
 .gif {
-    width: 50vw;
+    width: 40vw;
+
 }
 
 
-@media screen and (min-height: 768px) {
+@media screen and (max-width: 1000px) {
+    .gif-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
     .gif{
         width: 90vw;
 
