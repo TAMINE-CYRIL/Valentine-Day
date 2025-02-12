@@ -2,6 +2,8 @@ body{
     background-color: #f6bcda;
     padding: 0;
     margin: 0;
+    top: 50%;
+
 
 }
 
@@ -24,11 +26,17 @@ p{
     }
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .button{
     text-align: center;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
 button{
@@ -55,6 +63,8 @@ button{
 .yes{
     background-color: #92d175;
 }
+
+
 
 
 .no {

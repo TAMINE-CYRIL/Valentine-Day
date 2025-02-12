@@ -1,6 +1,6 @@
 const audio = new Audio("media/chill.mp3");
 const yippie = new Audio("media/yippie.mp3");
-
+audio.loop = true;
 
 /**
  * Fonction créant les coeurs et les implémente dans le corps du site
@@ -54,7 +54,9 @@ function yes() {
     buttonNo.style.display = "none";
     buttonYes.style.display = "none";
     text.textContent = "Let me give you a hug ️! ❤️";
-    text.style.display = "block";
+    text.style.position = "absolute";
+    text.style.top = "10px";
+    text.style.textAlign = "center";
     yippie.play();
     createGif();
     audio.play();
