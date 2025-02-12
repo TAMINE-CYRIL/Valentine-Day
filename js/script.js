@@ -1,5 +1,5 @@
-let audio = new Audio("media/chill.mp3");
-let yippie = new Audio("media/yippie.mp3");
+const audio = new Audio("media/chill.mp3");
+const yippie = new Audio("media/yippie.mp3");
 
 
 /**
@@ -23,23 +23,6 @@ function createHeart() {
  */
 function startHearts() {
     setInterval(createHeart, 300);
-}
-
-/**
- * Résultat final en cas de 8 refus de cliquer sur le bouton Yes
- * @param buttonYes
- */
-function finalChoice(buttonYes){
-    buttonYes.style.fontSize = "5rem";
-    buttonYes.style.position = "fixed";
-    buttonYes.style.top = "0";
-    buttonYes.style.left = "0";
-    buttonYes.style.width = "calc(100vw - 20px)";
-    buttonYes.style.height = "calc(100vh - 20px)";
-    buttonYes.style.margin = "10px";
-
-    let buttonNo = document.querySelector(".no");
-    buttonNo.style.display = "none";
 }
 
 
@@ -68,7 +51,6 @@ function yes() {
     let buttonNo = document.querySelector(".no");
     let buttonYes = document.querySelector(".yes");
     let text = document.querySelector(".love");
-
     buttonNo.style.display = "none";
     buttonYes.style.display = "none";
     text.textContent = "Let me give you a hug ️! ❤️";

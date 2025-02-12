@@ -38,15 +38,17 @@ button{
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
-    height: 80px;
-    width: 120px;
+    height: 120px;
+    width: 200px;
 
 }
 
-button:hover{
-    height: 90px;
-    width: 130px;
-    transition: all 0.5s ease-in-out;
+@media screen and (max-width: 768px){
+    button{
+        height: 90px;
+        width: 180px;
+    }
+
 }
 
 
@@ -59,22 +61,6 @@ button:hover{
     background-color: #dd2b2b;
 
 }
-
-.no:active {
-    background-color: #dc8080; /* Remet la couleur de base */
-    color: #ffffff;
-}
-
-.yes:active{
-    background-color: #afd69d;
-    color: white;
-}
-
-.love{
-    display: flex;
-    justify-content: center;
-}
-
 
 .heart {
     position: fixed;
@@ -107,9 +93,4 @@ button:hover{
 .gif {
     width: 50vw;
     max-width: 90vh;
-}
-
-.valentine{
-    width: 0;
-
 }
