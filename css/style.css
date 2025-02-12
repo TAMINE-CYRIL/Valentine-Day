@@ -2,9 +2,6 @@ body{
     background-color: #f6bcda;
     padding: 0;
     margin: 0;
-    top: 50%;
-
-
 }
 
 p{
@@ -40,8 +37,8 @@ p{
 }
 
 button{
-    padding: 20px;
-    margin: 20px;
+    padding: 1em;
+    margin: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,12 +48,21 @@ button{
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 508px){
     button{
-        height: 90px;
-        width: 180px;
-    }
+        font-size: 1rem;
+        height: 10vh;
+        width: 30vw;
 
+    }
+}
+
+@media screen and (max-width: 380px){
+    button{
+        font-size: 0.9rem;
+        height: 9vh;
+        width: 35vw;
+    }
 }
 
 
@@ -102,5 +108,13 @@ button{
 
 .gif {
     width: 50vw;
-    max-width: 90vh;
+}
+
+
+@media screen and (min-height: 768px) {
+    .gif{
+        width: 90vw;
+
+    }
+
 }

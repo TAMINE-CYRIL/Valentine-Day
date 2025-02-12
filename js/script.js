@@ -59,8 +59,8 @@ function yes() {
     text.style.textAlign = "center";
     yippie.play();
     createGif();
-    audio.play();
     alert("I knew it ! ❤️");
+    audio.play();
     startHearts();
 }
 
