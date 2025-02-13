@@ -32,12 +32,12 @@ function startHearts() {
 function createGif(){
     let gifContainer = document.createElement("section");
     gifContainer.classList.add("gif-container");
-
+    let gifLove = document.querySelector(".gifLove");
     let gif = document.createElement("img");
     gif.classList.add("gif");
     gif.src = "media/couple.gif";
     gif.alt = "couple gif";
-
+    gifLove.style.display = "none";
     gifContainer.appendChild(gif);
     document.body.appendChild(gifContainer);
 
@@ -59,7 +59,6 @@ function yes() {
     text.style.textAlign = "center";
     yippie.play();
     createGif();
-    alert("I knew it ! ❤️");
     audio.play();
     startHearts();
 }

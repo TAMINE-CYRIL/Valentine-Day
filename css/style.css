@@ -130,3 +130,13 @@ button{
     }
 
 }
+
+.gifLove{
+    width: 15vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .gifLove{
+        width: 40vw;
+    }
+}
